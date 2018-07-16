@@ -1,0 +1,14 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<p>Based on your activity on our platform, we thought you might be interested in working on one of the following requests:</p>
+
+<table>
+  <tr th:each="request : ${requests}">
+    <td>&nbsp;</td>
+  </tr>
+</table>
+
+<p>Kind regards,</p>
+<p>The FundRequest team</p>
+
+</html>
