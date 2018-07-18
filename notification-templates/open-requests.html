@@ -5,7 +5,6 @@
 <table>
   <tr th:each="request : ${requests}">
     <td th:text="${request.issueInformation.title}"></td>
-    #numbers.formatDecimal(transfer.otherFunds.totalAmount,1,'COMMA',2,'POINT')}">100,00</span>
     <td th:if="${request.funds.fndFunds != null}" th:text="${#numbers.formatDecimal(request.funds.fndFunds.totalAmount,1,'COMMA',2,'POINT') + ' ' + request.funds.fndFunds.tokenSymbol}"></td>
     <td th:if="${request.funds.otherFunds != null}" th:text="${#numbers.formatDecimal(request.funds.otherFunds.totalAmount,1,'COMMA',2,'POINT') + ' ' + request.funds.otherFunds.tokenSymbol}"></td>
     <td th:text="${'$ ' + #numbers.formatDecimal(request.funds.usdFunds, ,1,'COMMA',2,'POINT')}"></td>
