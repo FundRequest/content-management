@@ -4,7 +4,7 @@
 
 <table>
   <tr th:each="request : ${requests}">
-    <td th:text="${request}"></td>
+    <td th:text="${request.issueInformation.title}"></td>
   </tr>
 </table>
 
