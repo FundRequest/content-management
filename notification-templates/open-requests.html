@@ -7,7 +7,7 @@
     <td th:text="${request.issueInformation.title}"></td>
     <td th:if="${request.funds.fndFunds != null}" th:text="${request.funds.fndFunds.totalAmount + ' ' + request.funds.fndFunds.tokenSymbol}"></td>
     <td th:if="${request.funds.otherFunds != null}" th:text="${request.funds.otherFunds.totalAmount + ' ' + request.funds.otherFunds.tokenSymbol}"></td>
-    <td th:text="${'$ ' + request.funds.totalAmount}"></td>
+    <td th:text="${'$ ' + request.funds.usdFunds}"></td>
   </tr>
 </table>
 
