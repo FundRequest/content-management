@@ -1,12 +1,16 @@
 <html xmlns:th="http://www.thymeleaf.org">
 
+<p>Hi there {{ first_name | fallback:"" }},</p>
+
 <p>Based on your activity on our platform, we thought you might be interested in working on one of the following requests:</p>
 
 <table>
   <tr th:each="request : ${requests}">
     <td th:text="${request.issueInformation.title}"></td>
-    <td th:if="${request.funds.fndFunds != null}" th:text="${#numbers.formatDecimal(request.funds.fndFunds.totalAmount,1,'COMMA',2,'POINT') + ' ' + request.funds.fndFunds.tokenSymbol}"></td>
-    <td th:if="${request.funds.otherFunds != null}" th:text="${#numbers.formatDecimal(request.funds.otherFunds.totalAmount,1,'COMMA',2,'POINT') + ' ' + request.funds.otherFunds.tokenSymbol}"></td>
+    <td th:if="${request.funds.fndFunds != null}"
+        th:text="${#numbers.formatDecimal(request.funds.fndFunds.totalAmount,1,'COMMA',2,'POINT') + ' ' + request.funds.fndFunds.tokenSymbol}"></td>
+    <td th:if="${request.funds.otherFunds != null}"
+        th:text="${#numbers.formatDecimal(request.funds.otherFunds.totalAmount,1,'COMMA',2,'POINT') + ' ' + request.funds.otherFunds.tokenSymbol}"></td>
     <td th:text="${'$ ' + #numbers.formatDecimal(request.funds.usdFunds,1,'COMMA',2,'POINT')}"></td>
   </tr>
 </table>
