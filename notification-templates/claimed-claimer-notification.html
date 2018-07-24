@@ -1,0 +1,13 @@
+<html xmlns:th="http://www.thymeleaf.org">
+
+<p>Thank you {{ first_name | fallback:"" }},</p>
+
+<p>The reward linked to issue <a th:href="">${request.issueInformation.title}</a> has been transferred to your account.</p>
+
+<p>Looking for more? Feel free to <a href="">browse</a> through all funded requests.</p>
+
+<p>&nbsp;</p>
+<p>Kind regards,</p>
+<p>The FundRequest team</p>
+
+</html>
