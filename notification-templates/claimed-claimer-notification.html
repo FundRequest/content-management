@@ -2,9 +2,9 @@
 
 <p>Thank you {{ first_name | fallback:"" }} for your code contribution.</p>
 
-<p>The reward linked to issue <a th:href="@{${platformBasepath}/requests/${request.id}}" th:text="${request.issueInformation.title}">Some text</a> has been transferred to your account.</p>
+<p>The reward linked to issue <a th:href="${platformBasepath + '/requests/' + request.id}" th:text="${request.issueInformation.title}">Some text</a> has been transferred to your account.</p>
 
-<p>Looking for more? Feel free to <a th:href="@{${platformBasepath}/requests}">browse</a> through all funded requests.</p>
+<p>Looking for more? Feel free to <a th:href="${platformBasepath + '/requests'}">browse</a> through all funded requests.</p>
 
 <p>&nbsp;</p>
 <p>Kind regards,</p>
