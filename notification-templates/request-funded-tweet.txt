@@ -1,1 +1,1 @@
-A new request just got funded with [[amount]] [[symbol]]. Find out more at [[issueURL]]
+A new request just got funded with [[${#numbers.formatDecimal(fund.tokenValue.totalAmount,1,'COMMA',2,'POINT')}]} [[${fund.tokenValue.tokenSymbol}]]. Find out more at [[${platformBasePath + '/requests/' + fund.requestId}]]
