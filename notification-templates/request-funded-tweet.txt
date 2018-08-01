@@ -1,0 +1,1 @@
+A new request just got funded with [[amount]] [[symbol]]. Find out more at [[issueURL]]
