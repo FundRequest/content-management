@@ -1,3 +1,5 @@
+|Request|Fund|
+|:--|--:|
 [# th:each="request,iter : ${requests}"]
-|[(${request.issueInformation.title})]|[[${'$' + #numbers.formatDecimal(request.funds.usdFunds,1,'COMMA',2,'POINT')}]]|[# th:if="${iter.index eq 0}"]\n|:--|--:|[/]
+|[[(${request.issueInformation.title})]](https://fundrequest.io/requests/[[${request.id}]])|[[${'$' + #numbers.formatDecimal(request.funds.usdFunds,1,'COMMA',2,'POINT')}]]|
 [/]
