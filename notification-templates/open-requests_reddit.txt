@@ -1,5 +1,6 @@
-|||
-:--|--:|--:|--:
-[# th:each="request : ${requests}"]
-    [(${request.issueInformation.title})]|[# th:if="${request.funds.fndFunds != null}"][[${#numbers.formatDecimal(request.funds.fndFunds.totalAmount,1,'COMMA',2,'POINT') + ' ' + request.funds.fndFunds.tokenSymbol}]][/]|[# th:if="${request.funds.otherFunds != null}"][[${#numbers.formatDecimal(request.funds.otherFunds.totalAmount,1,'COMMA',2,'POINT') + ' ' + request.funds.otherFunds.tokenSymbol}]][/]|[[${'$' + #numbers.formatDecimal(request.funds.usdFunds,1,'COMMA',2,'POINT')}]]
+[# th:each="request,iter : ${requests}"]
+    [(${request.issueInformation.title})]|[[${'$' + #numbers.formatDecimal(request.funds.usdFunds,1,'COMMA',2,'POINT')}]]|
+    [# th:if="${iter.index eq 0}"]
+        :--|--:
+    [/]
 [/]
