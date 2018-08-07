@@ -1,5 +1,3 @@
 {
-  "channels": {
-    "funded-notification": ["FundRequest/funded-requests-test"]
-  }
+  "fundedNotification": ["FundRequest/funded-requests-test"]
 }
